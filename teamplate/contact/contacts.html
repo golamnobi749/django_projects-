@@ -1,0 +1,32 @@
+
+    {{result}}
+    {% if result %}
+    <table border='2px' cellpadding='10' cellspacing='10'>
+        <tr>
+            <th>student_id</th>
+            <th>student_father_name</th>
+            <th>student_mother_name</th>
+            <th>bangla</th>
+            <th>math</th>
+            <th>english</th>
+            <th>science</th>
+            <th>social</th>
+            <th>religuion</th>
+        </tr>
+        {% for results in result %}
+        <tr>
+            <td>{{results.student_id}}</td>
+            <td>{{results.student_father_name}}</td>
+            <td>{{results.student_mother_name}}</td>
+            <td>{{results.bangla}}</td>
+            <td>{{results.math}}</td>
+            <td>{{results.english}}</td>
+            <td>{{results.science}}</td>
+            <td>{{results.social}}</td>
+            <td>{{results.religuion}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h2>empty data</h2>
+    {% endif %}
